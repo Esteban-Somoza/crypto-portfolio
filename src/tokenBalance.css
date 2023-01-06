@@ -1,0 +1,84 @@
+.tokenMenu{
+    /* background-color: wheat; */
+    background-color: gray;
+    padding: 0 .5em;
+    position: absolute;
+    display: none;
+    visibility: hidden;
+    z-index: 10;
+    left: 100%;
+    transition: 0.2s;
+    top: 0%;
+    /* display: flex; */
+    gap: 1em;
+    border-radius: 0 .5em .5em 0;
+    height: 1.75em;
+}
+
+.menu{
+    background-color: gray;
+    border-radius:  25%;
+    position: relative;
+    height: 1.75em;
+}
+
+.deleteToken {
+    position: absolute;
+    padding: 2em;
+    background-color: blue;
+}
+
+.tokenMenuButton{
+    margin: 0;
+    padding: 5px;
+    /* height: 100px; */
+}
+.menu:hover  .tokenMenu{
+    margin: 0;
+    display: flex;
+    visibility: visible;
+    transition: 0.2s;
+
+    /* display: block; */
+    /* height: 100px; */
+}
+
+.menu:hover .tokenMenuButton{
+    opacity: 0.25;
+    transform: scale(.9);
+    transition: .1s;
+}
+
+.menu:hover{
+    border-radius: .5em 0 0 .5em;
+    /* background-color: royalblue; */
+    transition: 0.2s;
+}
+
+.tokenMenuIcon{
+    /* background-color: red; */
+    background-color: transparent;
+    border: 0;
+    font-weight: 100;
+    /* position: absolute; */
+    margin: 0;
+    font-size: .9em;
+    color: white;
+}
+.tokenMenuIcon:hover{
+    transform: scale(1.1);
+    transition: 0.2s;
+    color: aquamarine;
+}
+
+/* .tokenMenu::before{
+    position: absolute;
+    content: ' .';
+    display: block;
+    left: 10px;
+    width: 10px;
+    height: 10px;
+    transform: rotate(90deg);
+    background-color:red;
+    rotate: 90deg;
+} */

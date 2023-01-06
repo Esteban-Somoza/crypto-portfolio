@@ -1,0 +1,61 @@
+
+#form{
+    display: block;
+    text-align: center;
+}
+
+.cancel {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    width: 2em;
+    aspect-ratio: 1/1;
+    border-radius: 0.5em;
+}
+
+.input {
+    width: 100%;
+    position: relative;
+}
+
+.suggestions li{
+    list-style-type:none
+}
+
+.suggestions{
+    background-color: lightgrey;
+    position: absolute;
+    max-height: 100px;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-radius: 0 0 1em 1em;
+
+}
+
+.tokenForm {
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    position: absolute;
+    background-color: white;
+    height: 50%;
+    aspect-ratio: 1/1;
+    padding: 2em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 1em;
+}
+
+.false {
+    display: none;
+}

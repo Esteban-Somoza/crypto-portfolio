@@ -1,0 +1,32 @@
+[
+    {
+        "token": "bitcoin",
+        "ticker": "BTC",
+        "amount": 2
+    },
+    {
+        "token": "ethcoingecko-api ID of tokenereum",
+        "ticker": "ticker",
+        "amount": 0
+    },
+    {
+        "token": "coingecko-api ID of token",
+        "ticker": "ticker",
+        "amount": 0
+    },
+    {
+        "token": "coingecko-api ID of token",
+        "ticker": "ticker",
+        "amount": 0
+    },
+    {
+        "token": "coingecko-api ID of token",
+        "ticker": "ticker",
+        "amount": 0
+    },
+    {
+        "token": "coingecko-api ID of token",
+        "ticker": "ticker",
+        "amount": 0
+    }
+]
