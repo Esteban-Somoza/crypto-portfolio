@@ -40,7 +40,7 @@ export default function TokenBalance(props) {
             </div>
             <div className='data'>
                 <h5>Portion of portfolio:</h5>
-                <h4 className='value'>{(props.value / props.totalValue).toFixed(2)}%</h4>
+                <h4 className='value'>{(props.value / props.totalValue * 100).toFixed(1)}%</h4>
             </div>
             <div className='data'>
                 <h5>Amount:</h5>

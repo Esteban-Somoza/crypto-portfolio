@@ -38,7 +38,7 @@ function App() {
       let orderedData = sortByValue(data);
 
       let totalValue = data.map(token => Number(token.value)).reduce((acc, token) => acc + token, 0);
-      setTotalValue(totalValue.toFixed(2));
+      setTotalValue(Math.round(totalValue));
 
       setTimeout(async () => {
         setLoading(false)
