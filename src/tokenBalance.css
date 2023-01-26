@@ -15,6 +15,15 @@
     height: 1.75em;
 }
 
+.positive{
+    color: rgb(0, 149, 0);
+    font-weight: bold;
+}
+.negative{
+    font-weight: bold;
+    color:rgb(158, 0, 0)
+}
+
 .menu{
     background-color: gray;
     border-radius:  25%;

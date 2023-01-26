@@ -1,4 +1,4 @@
-import React, { useState, useContext, useRef } from 'react'
+import React, { useState, useContext, useRef, useEffect } from 'react'
 import { tokenDataContext } from "./context/TokenEditData";
 import refresh from "./functions/refresh";
 
@@ -12,6 +12,12 @@ import { faPen, faTrash } from '@fortawesome/free-solid-svg-icons'
 export default function TokenBalance(props) {
     const { tokenData, setTokenData } = useContext(tokenDataContext)
     const [rerender, setRerender] = useState(false);
+    const [positive, setPositive] = useState('positive');
+
+    useEffect(() => {
+        if (props.change24hs > 0) setPositive('positive')
+        else setPositive('negative')
+    }, [props])
 
 
     function editToken(form) {
@@ -49,6 +55,10 @@ export default function TokenBalance(props) {
             <div className='data'>
                 <h5>Token Price:</h5>
                 <h4>${props.price.toFixed(3)}</h4>
+            </div>
+            <div className='data'>
+                <h5>24 hour change:</h5>
+                <h4 className={positive}>{props.change24hs}%</h4>
             </div>
             <div className='menu'>
                 <div className="tokenMenu" >

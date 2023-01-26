@@ -105,7 +105,7 @@ function App() {
             <div className='information'>
               {tokens && tokens.map((token, i) => {
                 return <form key={i} >
-                  <TokenBalance token={token.token} ticker={token.ticker} value={token.value} price={token.usd} totalValue={totalValue} amount={token.amount} editToken={editToken} />
+                  <TokenBalance token={token.token} ticker={token.ticker} value={token.value} price={token.usd} totalValue={totalValue} amount={token.amount} editToken={editToken} change24hs={token.change24hs}/>
                 </form>
               })
               }
