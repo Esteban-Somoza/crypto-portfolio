@@ -6,8 +6,24 @@
     font-weight: 400;
 }
 
-.App {
+.container{
+    height: 100%;
+    transition: 175ms ease-in-out;
+}
 
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10%;
+    /* background-color: rebeccapurple; */
+    height: 10%;
+    box-shadow: 0px 0px 20px 10px rgb(194, 194, 194);
+    background-color: rgb(194, 194, 194);
+}
+
+.App {
+    height: 100vh;
     background-color: rgb(219, 219, 219);
 }
 
@@ -17,12 +33,12 @@
 
 
 .mainBody {
-    padding: 2em;
     display: flex;
     flex-wrap: wrap;
     text-align: center;
     height: 100vh;
     align-items: center;
+
 }
 
 .body {
@@ -30,22 +46,26 @@
     justify-content: center;
     display: flex;
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    height: 90%;
+    /* align-items: stretch; */
+    margin: auto;
+    
 }
 
 .title {
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 800;
     margin: auto;
     display: block;
-    padding: 1em;
+    /* padding: 1em; */
     border-radius: 2em;
     color:black;
-    box-shadow: 0px 0px 20px 10px rgb(194, 194, 194);
 }
 
-.total {
-    font-weight: 800;
-}
+
 
 .information {
     /* border: 1px solid blue; */
@@ -59,13 +79,22 @@
 }
 
 .totalValue {
-    background-color: rgb(194, 194, 194);
-    box-shadow: 0px 0px 20px 10px rgb(194, 194, 194);
-    border-radius: 2em;
-    padding: 2em;
+    /* background-color: rgb(194, 194, 194); */
+    /* box-shadow: 0px 0px 20px 10px rgb(194, 194, 194); */
+    /* border-radius: 2em; */
+    /* padding: 2em; */
     /* margin: 1em 8em; */
     margin: auto;
-    width: 250px;
+    /* width: 250px; */
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.totalValue h3{
+    font-weight: 600;
 }
 
 .token {
@@ -73,6 +102,7 @@
     margin: 1em;
     gap: 1em;
     align-items: flex-end;
+    justify-content: space-between;
 }
 
 .ticker {

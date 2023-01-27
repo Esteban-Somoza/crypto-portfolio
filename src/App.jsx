@@ -28,7 +28,7 @@ function App() {
   const [totalValue, setTotalValue] = useState(0)
   const [seconds, setSeconds] = useState(0)
 
-  const mainBody = [`${blur} mainBody`]
+  const container = [`${blur} container`]
 
 
   useEffect(() => {
@@ -88,24 +88,28 @@ function App() {
   return (
     <div className='App'>
       {loading ? <div className='loading'><FontAwesomeIcon icon={faRotateRight} className="load" /></div> :
-        <div className={mainBody}>
-          <h1 className='title'>Token holdings:</h1>
-          <div className='totalValue'>
-            <h2 className='total'>Total value held:</h2>
-            {
-              totalValue && <h3>${totalValue}</h3>
-            }
-            <br />
-            <h5> last update: </h5>
-            <h5 className='timestamp'>
-              {seconds != 0 && seconds == 1 ? `${seconds} second ago` : `${seconds} seconds ago`}
-            </h5>
+        <div className={container}>
+          <div className='header'>
+            <h1 className='title'>Token holdings:</h1>
+            <div className='totalValue'>
+              <h2 className='total'>Total value held:</h2>
+              {
+                totalValue && <h3>${totalValue}</h3>
+              }
+              <br />
+              <div>
+                <h5> last update: </h5>
+                <h5 className='timestamp'>
+                  {seconds != 0 && seconds == 1 ? `${seconds} second ago` : `${seconds} seconds ago`}
+                </h5>
+              </div>
+            </div>
           </div>
           <div className='body'>
             <div className='information'>
               {tokens && tokens.map((token, i) => {
                 return <form key={i} >
-                  <TokenBalance token={token.token} ticker={token.ticker} value={token.value} price={token.usd} totalValue={totalValue} amount={token.amount} editToken={editToken} change24hs={token.change24hs}/>
+                  <TokenBalance token={token.token} ticker={token.ticker} value={token.value} price={token.usd} totalValue={totalValue} amount={token.amount} editToken={editToken} change24hs={token.change24hs} />
                 </form>
               })
               }
