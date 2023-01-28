@@ -39,7 +39,7 @@ export default function TokenBalance(props) {
 
     return (
         <div className='token'>
-            <h3 className='ticker'>{props.ticker}:</h3>
+            <h3 className='ticker'>${props.ticker}:</h3>
             <div className='data'>
                 <h5>Value held:</h5>
                 <h4 className='value'>${props.value}</h4>

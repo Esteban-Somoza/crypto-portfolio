@@ -54,7 +54,7 @@ function App() {
 
   setTimeout(() => {
     refresh()
-  }, 120000);
+  }, 60000);
 
 
   setTimeout(() => {
