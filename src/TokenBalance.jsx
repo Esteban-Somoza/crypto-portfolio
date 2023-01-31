@@ -7,7 +7,7 @@ import deleteToken from "./api/deleteDataBase";
 import './tokenBalance.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPen, faTrash } from '@fortawesome/free-solid-svg-icons'
+import { faPen, faTrash, faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 
 export default function TokenBalance(props) {
     const { tokenData, setTokenData } = useContext(tokenDataContext)
@@ -39,7 +39,7 @@ export default function TokenBalance(props) {
 
     return (
         <div className='token'>
-            <h3 className='ticker'>${props.ticker}:</h3>
+            <a href={'https://www.coingecko.com/en/coins/' + props.token} target="_blank" className='ticker'>${props.ticker}  <FontAwesomeIcon icon={faUpRightFromSquare} className='link' />:</a>
             <div className='data'>
                 <h5>Value held:</h5>
                 <h4 className='value'>${props.value}</h4>

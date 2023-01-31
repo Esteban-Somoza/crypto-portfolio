@@ -1,6 +1,6 @@
 .tokenMenu{
     /* background-color: wheat; */
-    background-color: rgb(194, 194, 194);
+    background-color: var(--denim);
     padding: 0 .5em;
     position: absolute;
     display: none;
@@ -15,6 +15,15 @@
     height: 1.75em;
 }
 
+.token a {
+    color: black;
+    text-decoration: none;
+}
+
+.link {
+    width: .8em;
+}
+
 .positive{
     color: rgb(0, 149, 0);
     font-weight: bold;
@@ -25,7 +34,7 @@
 }
 
 .menu{
-    background-color: rgb(194, 194, 194);
+    background-color: var(--denim);
     border-radius:  25%;
     position: relative;
     height: 1.75em;
@@ -40,6 +49,7 @@
 .tokenMenuButton{
     margin: 0;
     padding: 5px;
+    color: var(--screen);
     /* height: 100px; */
 }
 .menu:hover  .tokenMenu{

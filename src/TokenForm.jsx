@@ -60,7 +60,7 @@ export default function TokenForm({ visibility, changeVisibility, isNewToken, to
                 <label htmlFor="text">Token Name</label>
                 <br />
                 <div className='input'>
-                    <input type="text" defaultValue={isNewToken ? val : data.token}  autocomplete="off" readOnly={!isNewToken ? true : false}
+                    <input type="text" value={isNewToken ? val : data.token}  autoComplete="off" readOnly={!isNewToken ? true : false}
                         {...register("token", {
                             required: true,
                             validate: {
@@ -81,7 +81,7 @@ export default function TokenForm({ visibility, changeVisibility, isNewToken, to
                         <div className='suggestions'>
                             {suggestions && suggestions.map(
                                 (option, i) =>
-                                    <div key={i}
+                                    <div key={i} className='option'
                                         onClick={setOption}
                                     >{option}</div>)
                             }
@@ -105,7 +105,7 @@ export default function TokenForm({ visibility, changeVisibility, isNewToken, to
                 {errors.ticker?.type === 'required' && <p role="alert">Token ticker required. (Ej: 'BTC')</p>}
 
                 <br />
-                <label htmlFor="text" >amount</label>
+                <label htmlFor="text" >Amount</label>
 
                 <br />
                 <input type="number" step="0.001" defaultValue={isNewToken ? undefined : data.amount}

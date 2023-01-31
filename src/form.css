@@ -44,7 +44,9 @@
     margin-bottom: auto;
 
     position: absolute;
-    background-color: white;
+    /* background-color: white; */
+    background-color: var(--denim);
+    color: white;
     height: 50%;
     aspect-ratio: 1/1;
     padding: 2em;
@@ -54,6 +56,20 @@
     justify-content: center;
 
     border-radius: 1em;
+}
+
+.tokenForm h2{
+    margin-bottom: 1em;
+}
+
+.tokenForm input{
+    padding: .5em;
+    margin: .2em;
+    margin-bottom: 1em;
+}
+
+.option{
+    color: var(--denim);
 }
 
 .false {

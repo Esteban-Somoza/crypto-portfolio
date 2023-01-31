@@ -73,6 +73,15 @@ function App() {
     return setIsVisible(!isVisible);
   }
 
+
+  document.addEventListener('keydown', handleEsc)
+  function handleEsc(e){
+    if(e.key === 'Escape') {
+      setIsVisible(false)
+      setBlur('noBlur')
+    }
+  }
+
   function addToken() {
     changeVisibility()
     setTokenData({})
@@ -97,7 +106,7 @@ function App() {
                 totalValue && <h3>${totalValue}</h3>
               }
               <br />
-              <div>
+              <div className='lastUpdate'>
                 <h5> last update: </h5>
                 <h5 className='timestamp'>
                   {seconds != 0 && seconds == 1 ? `${seconds} second ago` : `${seconds} seconds ago`}
@@ -113,7 +122,7 @@ function App() {
                 </form>
               })
               }
-              <button onClick={addToken}>Add Token</button>
+              <button className='addTokenBtn' onClick={addToken} >Add Token</button>
             </div>
           </div>
           <button className='refresh' onClick={refresh}>

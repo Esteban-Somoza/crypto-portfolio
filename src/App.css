@@ -4,33 +4,59 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
+    --denim: #1A2930;
+    --screen: #C5C1C0;
+    --marigold: #f7ce3e;
+    --steel: #0a1612;
 }
 
-.container{
+.container {
     height: 100%;
     transition: 175ms ease-in-out;
+    /* color: ;   */
 }
 
-.header{
+.header {
     width: 100%;
     display: flex;
+    color: var(--steel);
     justify-content: space-between;
     gap: 10%;
-    /* background-color: rebeccapurple; */
+    /* background-color: rebeccadenim; */
     height: 10%;
-    box-shadow: 0px 0px 20px 10px rgb(194, 194, 194);
-    background-color: rgb(194, 194, 194);
+    box-shadow: 0px 0px 20px 15px var(--steel);
+    background-color: var(--steel);
+}
+
+.lastUpdate{
+    color: var(--screen);
 }
 
 .App {
     height: 100vh;
-    background-color: rgb(219, 219, 219);
+    background-color: var(--denim);
 }
 
-.blur{
-    filter: blur(4px);
+.blur {
+    filter: blur(5px);
 }
 
+.addTokenBtn {
+    padding: .5em 2em;
+    margin: 1em;
+    border: 0;
+    background-color: var(--denim);
+    border-radius: .5em;
+    color: var(--marigold);
+}
+
+.addTokenBtn:hover {
+    background: white;
+    color: var(--denim);
+    transition: .15s ease-in-out;
+    border-radius: 1em;
+    box-shadow: 0px 0px 20px 5px var(--denim);
+}
 
 .mainBody {
     display: flex;
@@ -52,7 +78,7 @@
     height: 90%;
     /* align-items: stretch; */
     margin: auto;
-    
+
 }
 
 .title {
@@ -62,16 +88,19 @@
     display: block;
     /* padding: 1em; */
     border-radius: 2em;
-    color:black;
+    color: var(--marigold);
 }
 
+.totalValue h3, .total{
+    color: var(--marigold);
+}
 
 
 .information {
     /* border: 1px solid blue; */
     padding: 2em;
     margin: auto;
-    background-color: rgb(228, 228, 228);
+    background-color: var(--screen);
     border-radius: 2em;
     /* box-shadow: 0px 0px 10px 10px rgba(255, 0, 0, 1); */
     /* box-shadow: 0px 0px 0px 20px rgba(255, 0, 0, .33); */
@@ -93,7 +122,7 @@
     text-align: center;
 }
 
-.totalValue h3{
+.totalValue h3 {
     font-weight: 600;
 }
 
@@ -131,8 +160,8 @@
     border: 0px solid black;
     color: rgb(78, 78, 78);
     background-color: rgb(255, 255, 255, .8);
-    box-shadow:0px 0px 20px 10px  rgb(194, 194, 194);
-    
+    box-shadow: 0px 0px 20px 10px rgb(194, 194, 194);
+
 }
 
 .icon {
